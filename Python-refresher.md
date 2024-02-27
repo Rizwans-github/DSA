@@ -22,6 +22,13 @@ print(text.count(old))
 print(text.replace(old, new))
 ```
 ![image](https://github.com/Rizwans-github/DSA/assets/141806496/13b1f896-4b1b-4ee3-810e-31cfd8e88697)
+```py
+#your code goes here
+text = input()
+letter = input()
+freq = (text.count(letter)/ len(text)) * 100
+print(int(freq))
+```
 ![image](https://github.com/Rizwans-github/DSA/assets/141806496/5e261ae0-cd8b-4461-b1dc-2f925cc3a2bd)
 ```py
 data = [
