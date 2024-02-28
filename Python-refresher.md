@@ -96,3 +96,40 @@ totalWords = len(words)
 letters =sum(len(word) for word in words)
 print(letters/totalWords)
 ```
+![image](https://github.com/Rizwans-github/DSA/assets/141806496/372f4e2e-a8b3-451b-8c07-e07e9ca6056b)
+![image](https://github.com/Rizwans-github/DSA/assets/141806496/01727685-8a2f-4429-a2da-6f404294fef8)
+![image](https://github.com/Rizwans-github/DSA/assets/141806496/ed0ad49e-33e7-4352-9145-dffbf8fdcdf5)
+```py
+contacts = {
+    "David": ["123-321-88", "david@test.com"],
+    "James": ["241-879-093", "james@test.com"],
+    "Bob": ["987-004-322", "bob@test.com"],
+    "Amy": ["340-999-213", "a@test.com"]
+}
+#your code goes here
+search = input().capitalize()
+if search in contacts:
+    print(contacts[search][1])
+else:
+    print("Not found")
+```
+![image](https://github.com/Rizwans-github/DSA/assets/141806496/c652c233-489c-46e2-9bea-e42e11905066)
+![image](https://github.com/Rizwans-github/DSA/assets/141806496/0335d9e8-9863-447a-a67e-f003acff9891)
+```py
+points = [
+    (12, 55),
+    (880, 123),
+    (64, 64),
+    (190, 1024),
+    (77, 33),
+    (42, 11),
+    (0, 90)
+]
+#your code goes here
+
+val=[]
+for i in points:
+    x,y = i
+    val.append((x**2 + y**2)**0.5)
+print(min(val))
+```
