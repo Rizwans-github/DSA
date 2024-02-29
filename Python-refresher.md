@@ -133,3 +133,120 @@ for i in points:
     val.append((x**2 + y**2)**0.5)
 print(min(val))
 ```
+![image](https://github.com/Rizwans-github/DSA/assets/141806496/9caa5eac-0d29-4db9-a9f8-bc93f857c10e)
+
+```PY
+nums = {1, 2, 1, 3, 1, 4, 5, 6}
+print(nums)
+nums.add(-7)
+nums.remove(3)
+print(nums)
+```
+![image](https://github.com/Rizwans-github/DSA/assets/141806496/f0de591e-9f5d-456b-b156-90994e780736)
+![image](https://github.com/Rizwans-github/DSA/assets/141806496/be98d10d-1af9-4286-9aca-7d05742529f4)
+```py
+first = {1, 2, 3, 4, 5, 6}
+second = {4, 5, 6, 7, 8, 9}
+
+print(first | second)
+print(first & second)
+print(first - second) 
+print(second - first) #Why this gives the output {8, 9, 7} and not {7, 8, 9} 
+                      #found the ans my bad so Sets are unordered collections of unique elements.ordered
+print(first ^ second)
+```
+![image](https://github.com/Rizwans-github/DSA/assets/141806496/dbf3f873-7a4d-4d96-8107-50a5ae14c5e7)
+![image](https://github.com/Rizwans-github/DSA/assets/141806496/c386bc0e-02e5-45c7-b074-2ed6f046c4e1)
+
+```py
+s1 = input()
+s2 = input()
+
+s1_words = {i for i in s1.split()}
+s2_words = {i for i in s2.split()}
+
+print(len(s1_words&s2_words))
+```
+![image](https://github.com/Rizwans-github/DSA/assets/141806496/b004f60a-dcd3-48e6-b764-5c0bc6b7fb4b)
+![image](https://github.com/Rizwans-github/DSA/assets/141806496/5932f515-d1bd-4e4a-a5f5-01cf77f11384)
+![image](https://github.com/Rizwans-github/DSA/assets/141806496/f95d2341-8dd1-4204-84ec-3c05a20d554f)
+
+```py
+data = {
+    "100-90": 25, "42-01": 48, "55-09": 12, "128-64": 71, "002-22": 18, "321-54": 19, "097-32": 33, "065-135": 64, "99-043": 80, "111-99": 11, "123-019": 5, "109-890": 72, "132-123": 27, "32-908": 27, "008-09": 25, "055-967": 35, "897-99": 44, "890-98": 56, "344-32": 65, "43-955": 59, "001-233": 9, "089-111": 15, "090-090": 17, "56-777": 23, "44-909": 27, "13-111": 21, "87-432": 15, "87-433": 14, "87-434": 23, "87-435": 11, "87-436": 12, "87-437": 16, "94-121": 15, "94-122": 35, "80-089": 10, "87-456": 8, "87-430": 40
+}
+age = int(input())
+#your code goes here
+normalSale = []
+newSale = []
+for i in data:
+    if data[i] >= 18:
+        normalSale.append(20)
+    else:
+        normalSale.append(5)
+for i in data:
+    if  data[i] >= age:
+        newSale.append(20)
+    else:
+        newSale.append(5)
+print(int(((sum(newSale) -sum(normalSale))/sum(normalSale))*100))
+```
+![image](https://github.com/Rizwans-github/DSA/assets/141806496/8fbfb2b0-f29d-4dcc-9446-b4261dc87c06)
+![image](https://github.com/Rizwans-github/DSA/assets/141806496/79a7b26a-adc8-444a-99db-2d42035856f0)
+![image](https://github.com/Rizwans-github/DSA/assets/141806496/8d9aeb05-fae7-4736-ad00-39491061c21a)
+
+```py
+class Stack:
+    def __init__(self):
+        self.items = []
+    
+    def is_empty(self):
+        return self.items == []
+
+    def push(self, item):
+        return self.items.insert(0, item)
+
+    def pop(self):
+        return self.items.pop(0)
+
+    def print_stack(self):
+        print(self.items)
+
+
+print(Stack().is_empty())
+s = Stack()
+
+s.push(3)
+s.push(2)
+s.push(1)
+s.print_stack()
+s.pop()
+s.print_stack()
+```
+![image](https://github.com/Rizwans-github/DSA/assets/141806496/a7b5eaef-9c18-475e-956c-bb94cf9616fd)
+
+```py
+class Browser:
+    def __init__(self):
+      self.links = []  
+  
+    def is_empty(self):
+      return self.links == []
+  
+    def push(self, link):
+      self.links.insert(0, link)
+    
+    def pop(self):
+      return self.links.pop(0)
+    
+  
+x = Browser()
+x.push('about:blank')
+x.push('www.sololearn.com')
+x.push('www.sololearn.com/courses/')
+x.push('www.sololearn.com/courses/python/')
+
+while not x.is_empty():
+    print(x.pop())
+```
+
