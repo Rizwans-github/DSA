@@ -1,4 +1,4 @@
-![image](https://github.com/Rizwans-github/DSA/assets/141806496/652ceaf2-d074-4ab9-a7a7-200807ca434a)
+![image](https://github.com/Rizwans-github/DSA/assets/141806496/1a28c171-445f-4fb7-b0ee-a2067b35e002)![image](https://github.com/Rizwans-github/DSA/assets/141806496/652ceaf2-d074-4ab9-a7a7-200807ca434a)
 ![image](https://github.com/Rizwans-github/DSA/assets/141806496/ad744e11-8843-46e8-80a4-20986e3fe3a0)
 ![image](https://github.com/Rizwans-github/DSA/assets/141806496/ae8631be-3e78-4335-9c9e-bf9f753b1307)
 ```py
@@ -249,4 +249,108 @@ x.push('www.sololearn.com/courses/python/')
 while not x.is_empty():
     print(x.pop())
 ```
+![image](https://github.com/Rizwans-github/DSA/assets/141806496/4779c8a8-469b-4ad9-8167-7b636e0cd72d)
+![image](https://github.com/Rizwans-github/DSA/assets/141806496/7d11cb35-4ae4-4338-80f0-c325089c477f)
+![image](https://github.com/Rizwans-github/DSA/assets/141806496/3e2aef0d-1e8a-4fe3-9f82-e03cba3ddca8)
 
+```py
+class Queue:
+    def __init__(self):
+        self.items = []
+
+    def is_empty(self):
+        return self.items == []
+
+    def enqueue(self, item):
+        self.items.insert(0, item)
+
+    def dequeue(self):
+        return self.items.pop()
+
+    def print_queue(self):
+        print(self.items)
+
+q = Queue()
+q.enqueue('a')
+q.enqueue('b')
+q.enqueue('42')
+q.print_queue()
+
+q.dequeue()
+q.print_queue()
+```
+
+![image](https://github.com/Rizwans-github/DSA/assets/141806496/bcf9f601-073a-46bd-8297-bb01b33e1d4e)
+
+![image](https://github.com/Rizwans-github/DSA/assets/141806496/cc430a6e-8e23-4f7e-9d3c-2c9270b14e3b)
+
+```py
+class CallCenter:
+    def __init__(self):
+      self.customers = []
+
+    def is_empty(self):
+      return self.customers == []
+
+    def add(self, x):
+      self.customers.insert(0, x)
+
+    def next(self):
+      return self.customers.pop()
+
+
+c = CallCenter()
+
+while True:
+    n = input()
+    if n == 'end':
+        break
+    c.add(n)
+time = 0
+#your code goes here
+while not c.is_empty():
+  if c.customers[-1] == "general":
+    time += 5
+    c.next()
+  else:
+    time += 10 
+    c.next()
+
+print(time)
+
+
+First Approach:
+'''class CallCenter:
+    def __init__(self):
+      self.customers = []
+
+    def is_empty(self):
+      return self.customers == []
+
+    def add(self, x):
+      self.customers.insert(0, x)
+
+    def next(self):
+      return self.customers.pop()
+
+
+c = CallCenter()
+
+while True:
+    n = input()
+    if n == 'end':
+        break
+    c.add(n)
+time = 0
+#your code goes here
+print(c.customers)
+for i in c.customers:
+  if i == "general":
+    time += 5
+    c.next()
+  else:
+    time += 10
+    c.next()
+print(time)'''
+```
+![image](https://github.com/Rizwans-github/DSA/assets/141806496/7d3e5492-f8c3-45d7-9402-4b1dc7bcb5cb)
